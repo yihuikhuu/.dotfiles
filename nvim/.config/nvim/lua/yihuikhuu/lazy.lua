@@ -13,8 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     { "nvim-lua/plenary.nvim" },
-    { "nvim-telescope/telescope.nvim", tag = "0.1.4",     dependencies = { "nvim-lua/plenary.nvim" } },
-    { "rose-pine/neovim",              name = "rose-pine" },
+    { "nvim-telescope/telescope.nvim",            tag = "0.1.5",     dependencies = { "nvim-lua/plenary.nvim" } },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    { "nvim-telescope/telescope-ui-select.nvim" },
+    { "rose-pine/neovim",                         name = "rose-pine" },
     {
         "folke/trouble.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -24,8 +26,9 @@ require("lazy").setup({
             -- refer to the configuration section below
         }
     },
-    { "nvim-treesitter/nvim-treesitter",        build = ":TSUpdate" },
-    { "theprimeagen/harpoon",                   branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
+    { "nvim-treesitter/nvim-treesitter",            build = ":TSUpdate" },
+    { "nvim-treesitter/nvim-treesitter-textobjects" },
+    { "theprimeagen/harpoon",                       branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
     { "mbbill/undotree" },
     { "tpope/vim-fugitive" },
     { "tpope/vim-surround" },

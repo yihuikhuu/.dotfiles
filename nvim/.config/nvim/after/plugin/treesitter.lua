@@ -26,5 +26,24 @@ require "nvim-treesitter.configs".setup {
             node_decremental = "<M-W>",
             scope_incremental = "<M-e>",
         }
+    },
+    textobjects = {
+        select = {
+            enable = true,
+            lookahead = true,
+            keymaps = {
+                ["af"] = "@function.outer",
+                ["if"] = "@function.inner",
+
+                ["ac"] = "@conditional.outer",
+                ["ic"] = "@conditional.inner",
+
+                ["ap"] = "@parameter.outer",
+                ["ip"] = "@parameter.inner",
+
+                ["av"] = "@variable.outer",
+                ["iv"] = "@variable.inner",
+            },
+        }
     }
 }
