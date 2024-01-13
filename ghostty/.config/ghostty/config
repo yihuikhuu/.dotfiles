@@ -36,3 +36,5 @@ keybind = alt+shift+h=resize_split:left,10
 keybind = alt+shift+l=resize_split:right,10
 
 cursor-style-blink=false
+
+macos-option-as-alt=true

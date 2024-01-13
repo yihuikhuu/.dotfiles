@@ -1,7 +1,7 @@
 local lsp = require("lsp-zero")
 
-require('mason').setup({})
-require('mason-lspconfig').setup({
+require("mason").setup({})
+require("mason-lspconfig").setup({
     -- Replace the language servers listed here
     -- with the ones you want to install
     ensure_installed = {},
@@ -13,10 +13,10 @@ require('mason-lspconfig').setup({
 lsp.preset("recommended")
 
 lsp.set_sign_icons({
-    error = 'E',
-    warn = 'W',
-    hint = 'H',
-    info = 'I'
+    error = "E",
+    warn = "W",
+    hint = "H",
+    info = "I"
 })
 
 lsp.on_attach(function(client, bufnr)
@@ -36,15 +36,15 @@ end)
 
 lsp.setup()
 
-local cmp = require('cmp')
+local cmp = require("cmp")
 local cmp_select = { behaviour = cmp.SelectBehavior.Select }
 cmp.setup({
     mapping = {
-        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<Tab>'] = nil,
-        ['<S-Tab>'] = nil,
+        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+        ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+        ["<C-y>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<Tab>"] = nil,
+        ["<S-Tab>"] = nil,
     }
 })

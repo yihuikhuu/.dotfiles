@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     { "nvim-lua/plenary.nvim" },
-    { "nvim-telescope/telescope.nvim", version = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
+    { "nvim-telescope/telescope.nvim", tag = "0.1.4",     dependencies = { "nvim-lua/plenary.nvim" } },
     { "rose-pine/neovim",              name = "rose-pine" },
     {
         "folke/trouble.nvim",
