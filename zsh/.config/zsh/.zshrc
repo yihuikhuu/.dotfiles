@@ -100,4 +100,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export EDITOR='nvim'
+
+sources=(
+  'aliases'
+  'git'
+)
+
+for s in "${sources[@]}"; do
+  source $HOME/.config/zsh/include/${s}.zsh
+done
+
+
 eval "$(~/.local/bin/mise activate zsh)"
