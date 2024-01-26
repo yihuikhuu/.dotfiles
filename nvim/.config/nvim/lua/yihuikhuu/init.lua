@@ -1,3 +1,3 @@
 require("yihuikhuu.remap")
 require("yihuikhuu.set")
-require("yihuikhuu.lazy")
+require("lazy").setup("yihuikhuu.plugins")
