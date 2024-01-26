@@ -59,7 +59,9 @@ require("lazy").setup({
     {
         "hrsh7th/nvim-cmp",
         dependencies = {
-            { "L3MON4D3/LuaSnip" }
+            { "L3MON4D3/LuaSnip" },
+            { "saadparwaiz1/cmp_luasnip" },
+            { "rafamadriz/friendly-snippets" },
         },
     },
     { 'akinsho/toggleterm.nvim', version = "*", config = true }
