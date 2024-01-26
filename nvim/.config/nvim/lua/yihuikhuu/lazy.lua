@@ -28,7 +28,13 @@ require("lazy").setup({
     },
     { "nvim-treesitter/nvim-treesitter",            build = ":TSUpdate" },
     { "nvim-treesitter/nvim-treesitter-textobjects" },
-    { "theprimeagen/harpoon",                       branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
+    {
+        "AckslD/nvim-neoclip.lua",
+        config = function()
+            require("neoclip").setup()
+        end,
+    },
+    { "theprimeagen/harpoon",                   branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
     { "mbbill/undotree" },
     { "tpope/vim-fugitive" },
     { "tpope/vim-surround" },
@@ -56,4 +62,5 @@ require("lazy").setup({
             { "L3MON4D3/LuaSnip" }
         },
     },
+    { 'akinsho/toggleterm.nvim', version = "*", config = true }
 }, opts)

@@ -6,5 +6,8 @@ vim.keymap.set("n", "<leader>ps", function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 
+vim.keymap.set("n", "<leader>py", function() vim.cmd("Telescope neoclip") end)
+
 _ = require("telescope").load_extension("fzf")
 _ = require("telescope").load_extension("ui-select")
+_ = require("telescope").load_extension("neoclip")
