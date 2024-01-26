@@ -64,5 +64,6 @@ require("lazy").setup({
             { "rafamadriz/friendly-snippets" },
         },
     },
-    { 'akinsho/toggleterm.nvim', version = "*", config = true }
+    { 'akinsho/toggleterm.nvim', version = "*", config = true },
+    { "folke/zen-mode.nvim" }
 }, opts)

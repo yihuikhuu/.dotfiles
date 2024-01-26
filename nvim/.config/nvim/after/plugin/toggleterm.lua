@@ -1,5 +1,5 @@
 require("toggleterm").setup {
-    open_mapping = "<leader>pt",
+    open_mapping = "<leader>tt",
     insert_mappings = false,
     direction = 'float'
 }
@@ -23,4 +23,4 @@ function _lazygit_toggle()
     lazygit:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
