@@ -23,3 +23,6 @@ alias gbn=__new_branch
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "wip: $(date)"'
 
 alias gundo='git reset HEAD~'
+
+# LazyGit
+alias lg='lazygit'
