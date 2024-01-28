@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move selected lines up and down
@@ -36,3 +37,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- Discipline
+local discipline = require("yihuikhuu.discipline")
+
+discipline.cowboy()
+discipline.bad_escape()
