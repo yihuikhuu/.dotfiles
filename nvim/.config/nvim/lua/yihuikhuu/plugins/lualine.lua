@@ -5,46 +5,67 @@ return {
         config = function()
             require('lualine').setup {
                 options = {
-                    icons_enabled = true,
-                    theme = 'auto',
-                    component_separators = { left = '', right = '' },
-                    section_separators = { left = '', right = '' },
-                    disabled_filetypes = {
-                        statusline = {},
-                        winbar = {},
-                    },
-                    ignore_focus = {},
-                    always_divide_middle = true,
                     globalstatus = true,
-                    refresh = {
-                        statusline = 1000,
-                        tabline = 1000,
-                        winbar = 1000,
-                    }
                 },
                 sections = {
-                    lualine_a = { 'mode' },
-                    lualine_b = { 'branch', 'diff', 'diagnostics' },
                     lualine_c = { { 'filename', path = 1 } },
-                    lualine_x = { 'encoding', 'filetype' },
-                    lualine_y = { 'progress' },
-                    lualine_z = { 'location' }
+                    lualine_x = {
+                        {
+                            require("noice").api.statusline.mode.get,
+                            cond = require("noice").api.statusline.mode.has,
+                            color = { fg = "#ff9e64" },
+                        },
+                        'encoding',
+                        'filetype'
+                    },
                 },
-                inactive_sections = {
-                    lualine_a = {},
-                    lualine_b = {},
-                    lualine_c = { 'filename' },
-                    lualine_x = { 'location' },
-                    lualine_y = {},
-                    lualine_z = {}
-                },
-                tabline = {},
-                winbar = {},
-                inactive_winbar = {},
-                extensions = {}
             }
 
             vim.opt.showmode = false
         end
-    }
+    },
+    {
+        'b0o/incline.nvim',
+        opts = {},
+        event = 'VeryLazy',
+        config = function()
+            local palette = require("rose-pine.palette")
+            require("incline").setup {
+                hide = {
+                    only_win = true
+                },
+                highlight = {
+                    groups = {
+                        InclineNormal = {
+                            guibg = palette.highlight_high,
+                            guifg = palette.text
+                        },
+                        InclineNormalNC = {
+                            guibg = palette.highlight_low,
+                            guifg = palette.text
+                        }
+                    }
+                },
+
+                window = { margin = { vertical = 0, horizontal = 1 } },
+
+                render = function(props)
+                    local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+
+                    local icon, color = require("nvim-web-devicons").get_icon_color(filename)
+                    local modified = ""
+                    if vim.bo[props.buf].modified then
+                        modified = "M "
+                    end
+
+                    return {
+                        { modified, guifg = palette.rose },
+                        { icon,     guifg = color },
+                        { " " },
+                        { filename }
+                    }
+                end,
+            }
+        end
+    },
 }
