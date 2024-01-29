@@ -1,6 +1,14 @@
 return {
     { "nvim-treesitter/nvim-treesitter-textobjects" },
-    { "nvim-treesitter/nvim-treesitter-context" },
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        config = function()
+            require("treesitter-context").setup({
+                enable = false
+            })
+            vim.keymap.set("n", "<leader>tc", function() vim.cmd("TSContextToggle") end)
+        end
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -78,8 +86,6 @@ return {
                     }
                 }
             }
-
-            vim.keymap.set("n", "<leader>tc", function() vim.cmd("TSContextToggle") end)
         end
     },
 }
