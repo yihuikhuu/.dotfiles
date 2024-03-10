@@ -18,6 +18,7 @@ return {
                 lua = { "stylua" },
                 javascript = { "biome" },
                 typescript = { "biome" },
+                vue = { "prettierd" },
                 elixir = { "mix" },
                 eelixir = { "mix" },
                 heex = { "mix" },
