@@ -38,6 +38,7 @@ keybind = alt+shift+l=resize_split:right,10
 cursor-style-blink=false
 
 macos-option-as-alt=true
+macos-titlebar-tabs=true
 
 font-family = JetBrains Mono
 font-size = 13
