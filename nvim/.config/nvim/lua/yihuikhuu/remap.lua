@@ -38,8 +38,8 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
--- Discipline
-local discipline = require("yihuikhuu.discipline")
+-- -- Discipline
+-- local discipline = require("yihuikhuu.discipline")
 
-discipline.cowboy()
-discipline.bad_escape()
+-- discipline.cowboy()
+-- discipline.bad_escape()
