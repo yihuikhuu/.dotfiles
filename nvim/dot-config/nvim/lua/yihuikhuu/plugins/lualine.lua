@@ -29,7 +29,7 @@ return {
         opts = {},
         event = 'VeryLazy',
         config = function()
-            local palette = require("rose-pine.palette")
+            local palette = require("catppuccin.palettes.mocha")
             require("incline").setup {
                 hide = {
                     only_win = true
@@ -37,11 +37,11 @@ return {
                 highlight = {
                     groups = {
                         InclineNormal = {
-                            guibg = palette.highlight_high,
+                            guibg = palette.surface2,
                             guifg = palette.text
                         },
                         InclineNormalNC = {
-                            guibg = palette.highlight_low,
+                            guibg = palette.base,
                             guifg = palette.text
                         }
                     }

@@ -1,26 +1,4 @@
-background=#191724
-foreground=#e0def4
-cursor-color=#555169
-
-selection-foreground=#2a2837
-selection-background=#e0def4
-
-palette=0=#26233a
-palette=1=#6e6a86
-palette=2=#eb6f92
-palette=3=#eb6f92
-palette=4=#9ccfd8
-palette=5=#9ccfd8
-palette=6=#f6c177
-palette=7=#f6c177
-palette=8=#31748f
-palette=9=#31748f
-palette=10=#c4a7e7
-palette=11=#c4a7e7
-palette=12=#ebbcba
-palette=13=#ebbcba
-palette=14=#e0def4
-palette=15=#e0def4
+theme = catppuccin-mocha
 
 keybind = cmd+alt+minus=new_split:down
 keybind = cmd+alt+backslash=new_split:right
@@ -38,7 +16,6 @@ keybind = alt+shift+l=resize_split:right,10
 cursor-style-blink=false
 
 macos-option-as-alt=true
-macos-titlebar-tabs=true
 
 font-family = JetBrains Mono
-font-size = 13
+font-size = 14
