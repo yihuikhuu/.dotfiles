@@ -6,7 +6,10 @@ return {
             require("toggleterm").setup {
                 open_mapping = [[<C-\>]],
                 insert_mappings = false,
-                direction = 'float'
+                direction = 'float',
+                float_opts = {
+                    border = 'curved'
+                }
             }
 
             local Terminal = require('toggleterm.terminal').Terminal
