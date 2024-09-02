@@ -1,4 +1,5 @@
 theme = catppuccin-mocha
+adjust-cell-height = 4
 
 keybind = cmd+alt+minus=new_split:down
 keybind = cmd+alt+backslash=new_split:right
@@ -18,4 +19,4 @@ cursor-style-blink=false
 macos-option-as-alt=true
 
 font-family = JetBrains Mono
-font-size = 14
+font-size = 16

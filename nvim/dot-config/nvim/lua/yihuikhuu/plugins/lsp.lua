@@ -47,6 +47,47 @@ return {
                     default_setup,
                 },
             })
+
+            local mason_path = vim.env.MASON or (vim.fn.stdpath("data") .. "/mason")
+            local vue_ts_path = mason_path ..
+                "/packages/" .. "vue-language-server" .. "/node_modules/@vue/language-server"
+            require('lspconfig').tsserver.setup({
+                init_options = {
+                    plugins = {
+                        {
+                            name = "@vue/typescript-plugin",
+                            location = vue_ts_path,
+                            languages = { "javascript", "typescript", "vue" },
+                        },
+                    },
+                },
+                filetypes = {
+                    "javascript",
+                    "javascriptreact",
+                    "javascript.jsx",
+                    "typescript",
+                    "typescriptreact",
+                    "typescript.tsx",
+                    "vue",
+                },
+            })
+
+            require('lspconfig').volar.setup({
+                init_options = {
+                    vue = {
+                        hybridMode = false
+                    },
+                },
+                filetypes = {
+                    "javascript",
+                    "javascriptreact",
+                    "javascript.jsx",
+                    "typescript",
+                    "typescriptreact",
+                    "typescript.tsx",
+                    "vue",
+                },
+            })
         end
     },
 }

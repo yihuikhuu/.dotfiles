@@ -38,6 +38,9 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+-- Terminal mode exit
+vim.keymap.set("t", "<C-]>", [[<C-\><C-n>]])
+
 -- -- Discipline
 -- local discipline = require("yihuikhuu.discipline")
 
