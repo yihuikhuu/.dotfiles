@@ -23,49 +23,5 @@ return {
 
             vim.opt.showmode = false
         end
-    },
-    {
-        'b0o/incline.nvim',
-        opts = {},
-        event = 'VeryLazy',
-        config = function()
-            local palette = require("catppuccin.palettes.mocha")
-            require("incline").setup {
-                hide = {
-                    only_win = true
-                },
-                highlight = {
-                    groups = {
-                        InclineNormal = {
-                            guibg = palette.surface2,
-                            guifg = palette.text
-                        },
-                        InclineNormalNC = {
-                            guibg = palette.base,
-                            guifg = palette.text
-                        }
-                    }
-                },
-
-                window = { margin = { vertical = 0, horizontal = 1 } },
-
-                render = function(props)
-                    local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
-
-                    local icon, color = require("nvim-web-devicons").get_icon_color(filename)
-                    local modified = ""
-                    if vim.bo[props.buf].modified then
-                        modified = "M "
-                    end
-
-                    return {
-                        { modified, guifg = palette.rose },
-                        { icon,     guifg = color },
-                        { " " },
-                        { filename }
-                    }
-                end,
-            }
-        end
-    },
+    }
 }

@@ -1,4 +1,4 @@
-theme = catppuccin-mocha
+theme = tokyonight
 adjust-cell-height = 4
 
 keybind = cmd+alt+minus=new_split:down
