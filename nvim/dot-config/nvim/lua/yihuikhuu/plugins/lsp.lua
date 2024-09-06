@@ -50,7 +50,7 @@ return {
             local mason_path = vim.env.MASON or (vim.fn.stdpath("data") .. "/mason")
             local vue_ts_path = mason_path ..
                 "/packages/" .. "vue-language-server" .. "/node_modules/@vue/language-server"
-            require('lspconfig').tsserver.setup({
+            require('lspconfig').ts_ls.setup({
                 init_options = {
                     plugins = {
                         {
