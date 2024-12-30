@@ -1,4 +1,4 @@
 .DS_STORE
-zsh/dot-config/zsh/.zcompdump*
-zsh/dot-config/zsh/.zsh_history
-zsh/dot-config/zsh/.zsh_sessions
+.config/zsh/dot-config/zsh/.zcompdump*
+.config/zsh/dot-config/zsh/.zsh_history
+.config/zsh/dot-config/zsh/.zsh_sessions

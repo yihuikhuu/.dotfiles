@@ -5,6 +5,3 @@ alias en='$EDITOR ~/.config/nvim/'
 
 alias ll='ls -al'
 alias l='ls -CF'
-
-alias bi='brew install '
-alias bu='brew upgrade'
