@@ -4,7 +4,7 @@ return {
     {
         "neovim/nvim-lspconfig",
         dependencies = {
-            { "hrsh7th/cmp-nvim-lsp" },
+            { 'saghen/blink.cmp' },
         },
         config = function()
             vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
@@ -31,7 +31,7 @@ return {
                 end
             })
 
-            local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+            local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
 
             local default_setup = function(server)
                 require('lspconfig')[server].setup({
