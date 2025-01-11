@@ -112,5 +112,3 @@ for s in "${sources[@]}"; do
   source $HOME/.config/zsh/include/${s}.zsh
 done
 
-
-eval "$(~/.local/bin/mise activate zsh)"

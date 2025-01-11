@@ -82,6 +82,9 @@ return {
 
                             ["av"] = "@variable.outer",
                             ["iv"] = "@variable.inner",
+
+                            ["aC"] = "@class.outer",
+                            ["iC"] = "@class.inner",
                         },
                     }
                 }
