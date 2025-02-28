@@ -1,19 +1,28 @@
 return {
+    -- {
+    --     "folke/tokyonight.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     opts = {},
+    --     config = function()
+    --         require("tokyonight").setup({
+    --             style = "night",
+    --             on_highlights = function(highlights, colors)
+    --                 highlights.LineNrAbove = { fg = "#5c6570" }
+    --                 highlights.LineNr = { fg = "#5c6570" }
+    --                 highlights.LineNrBelow = { fg = "#5c6570" }
+    --             end,
+    --         })
+    --         vim.cmd.colorscheme "tokyonight-night"
+    --     end
+    -- },
     {
-        "folke/tokyonight.nvim",
+        "loctvl842/monokai-pro.nvim",
         lazy = false,
         priority = 1000,
         opts = {},
-        config = function()
-            require("tokyonight").setup({
-                style = "night",
-                on_highlights = function(highlights, colors)
-                    highlights.LineNrAbove = { fg = "#5c6570" }
-                    highlights.LineNr = { fg = "#5c6570" }
-                    highlights.LineNrBelow = { fg = "#5c6570" }
-                end,
-            })
-            vim.cmd.colorscheme "tokyonight-night"
+        config = function() 
+            vim.cmd.colorscheme "monokai-pro"
         end
     }
 }
