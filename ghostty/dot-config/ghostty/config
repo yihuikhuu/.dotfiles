@@ -1,5 +1,5 @@
 macos-titlebar-style=tabs
-theme = tokyonight_night
+theme = Kanagawa Wave
 adjust-cell-height = 4
 
 keybind = cmd+alt+minus=new_split:down
