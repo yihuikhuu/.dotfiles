@@ -15,6 +15,7 @@ return {
                             cond = require("noice").api.statusline.mode.has,
                             color = { fg = "#ff9e64" },
                         },
+                        { require("yihuikhuu.util.codecompanion-lualine") },
                         'encoding',
                         'filetype'
                     },
