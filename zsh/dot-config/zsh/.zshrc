@@ -104,6 +104,7 @@ export EDITOR='nvim'
 export XDG_CONFIG_HOME="$HOME/.config"
 
 sources=(
+  'init'
   'aliases'
   'git'
 )
@@ -112,3 +113,4 @@ for s in "${sources[@]}"; do
   source $HOME/.config/zsh/include/${s}.zsh
 done
 
+. "$HOME/.local/bin/env"
