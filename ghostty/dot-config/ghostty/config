@@ -2,19 +2,6 @@ macos-titlebar-style=tabs
 theme = Kanagawa Wave
 adjust-cell-height = 4
 
-keybind = cmd+alt+minus=new_split:down
-keybind = cmd+alt+backslash=new_split:right
-
-keybind = cmd+shift+k=goto_split:top
-keybind = cmd+shift+j=goto_split:bottom
-keybind = cmd+shift+h=goto_split:left
-keybind = cmd+shift+l=goto_split:right
-
-keybind = alt+shift+k=resize_split:up,10
-keybind = alt+shift+j=resize_split:down,10
-keybind = alt+shift+h=resize_split:left,10 
-keybind = alt+shift+l=resize_split:right,10
-
 cursor-style-blink=false
 
 macos-option-as-alt=true
